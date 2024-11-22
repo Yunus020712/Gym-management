@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Gym kebanggaan Pak Karim</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <h1>Gym Member Management System</h1>
+    <h1>Login</h1>
+    <form method="POST" action="/"> <!-- Updated action -->
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        
+        <!-- Add reCAPTCHA widget -->
+        <div class="g-recaptcha" data-sitekey="6Le3voYqAAAAAIJ0OcTGjd4ioLfY16uJ-OKCIkWk"></div>
+        
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>

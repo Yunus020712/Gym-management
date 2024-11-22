@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup MFA</title>
+</head>
+<body>
+    <h1>Setup Multi-Factor Authentication</h1>
+    <p>Scan the QR code below with your authenticator app:</p>
+    <img src="data:image/png;base64,{{ qr_code }}" alt="QR Code">
+    <p>Your MFA Key: {{ mfa_key }}</p>
+    <form method="POST">
+        <!-- Hidden field to pass mfa_key back to the server -->
+        <input type="hidden" name="mfa_key" value="{{ mfa_key }}">
+        <button type="submit">Proceed to Verify</button>
+    </form>
+</body>
+</html>
